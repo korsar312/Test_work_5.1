@@ -1,0 +1,22 @@
+$transit: ease-in-out 0.1s;
+
+%main_thaim{
+  background: #cdcdcd;
+}
+%Center_Gor{
+  display: flex;
+  justify-content: center;
+}
+%Center_Ver{
+  display: flex;
+  justify-content: center;
+}
+%Center_Full{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%Full{
+  height: 100%;
+  width: 100%;
+}
