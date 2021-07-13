@@ -1,7 +1,7 @@
 <template>
 
     <v-container app>
-        <v-row class="px-7" dense v-for="(param,i) in getObjKeys()" :key="i">
+        <v-row dense v-for="(param,i) in getObjKeys()" :key="i">
             <RenderProportion :item="{param,item}"/>
         </v-row>
     </v-container>

@@ -5,7 +5,7 @@
             <template v-slot:default>
 
                 <thead>
-                    <tr class="orange  lighten-3">
+                    <tr class="orange lighten-3">
                         <th class="text-left">
                             Name
                         </th>

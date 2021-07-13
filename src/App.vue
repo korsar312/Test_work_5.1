@@ -1,14 +1,11 @@
 <template>
     <v-app id="inspire">
 
-        <v-navigation-drawer permanent expand-on-hover app  >
-            <Navigation/>
-        </v-navigation-drawer>
+        <Navigation/>
 
-        <v-main>
-            <v-container fluid>
-                <router-view></router-view>
-            </v-container>
+
+        <v-main class="pl-10">
+            <router-view></router-view>
         </v-main>
 
     </v-app>

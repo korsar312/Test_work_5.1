@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-navigation-drawer permanent expand-on-hover fixed>
 
         <v-list nav dense>
             <v-list-item link v-on:click="changeView('request')">
@@ -18,15 +18,11 @@
 
         </v-list>
 
-
         <v-divider></v-divider> <!--    ======================     -->
 
-
-        <SlaveNav v-for="(item, i) in $store.state.window" :key="i" :item="item"/>
-
+            <SlaveNav v-for="(item, i) in $store.state.window" :key="i" :item="item"/>
 
         <v-divider></v-divider> <!--    ======================     -->
-
 
         <v-list-item v-on:click="addNewReq()">
             <v-list-item-icon>
@@ -35,9 +31,7 @@
             <v-list-item-title>Добавить</v-list-item-title>
         </v-list-item>
 
-    </div>
-
-
+    </v-navigation-drawer>
 
 </template>
 
