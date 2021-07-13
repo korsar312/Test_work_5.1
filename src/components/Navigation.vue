@@ -1,7 +1,13 @@
 <template>
-    <v-navigation-drawer permanent expand-on-hover fixed>
+    <v-navigation-drawer permanent :mini-variant="navOpen" fixed touchless class=".overflow-hidden">
 
         <v-list nav dense>
+            <v-btn icon v-on:click="navOpen = !navOpen">
+                <v-icon >
+                    {{slide}}
+                </v-icon>
+            </v-btn>
+
             <v-list-item link v-on:click="changeView('request')">
                 <v-list-item-icon>
                     <v-icon>mdi-account-multiple</v-icon>
@@ -40,7 +46,17 @@
     import SlaveNav from "./SlaveNav";
     export default {
         name: "Navigation",
+        data(){
+            return{
+                navOpen: true,
+            }
+        },
         components: {SlaveNav},
+        computed:{
+            slide(){
+                return this.navOpen ? 'mdi-arrow-collapse-right' : 'mdi-arrow-collapse-left'
+            }
+        },
         methods:{
             changeView(el){
                 this.$route.path !== '/' && this.$router.push('/')
@@ -48,7 +64,7 @@
             },
             addNewReq(){
                 this.$store.dispatch('createWindowStack')
-            }
+            },
         },
     }
 </script>

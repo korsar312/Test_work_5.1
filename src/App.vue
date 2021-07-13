@@ -4,7 +4,7 @@
         <Navigation/>
 
 
-        <v-main class="pl-10">
+        <v-main class="pl-13">
             <router-view></router-view>
         </v-main>
 
