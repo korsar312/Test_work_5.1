@@ -1,7 +1,7 @@
 <template>
     <v-app id="inspire">
 
-        <v-navigation-drawer permanent expand-on-hover app>
+        <v-navigation-drawer permanent expand-on-hover app  >
             <Navigation/>
         </v-navigation-drawer>
 
@@ -45,7 +45,7 @@
 
                     if(localStorage.getItem('window') !== null){
                         localStorage.getItem('window').split(',').forEach(i=>{
-                            this.$store.dispatch('addWindowStack',i)
+                            this.$store.commit('addWindow',i)
                         })
                     }
 

@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <v-container class="main">
+        <v-container app class="main px-7">
             <Form class="Form" v-for="item in data" :key="item.id" :item="item"/>
         </v-container>
 

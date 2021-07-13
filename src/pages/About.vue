@@ -1,7 +1,7 @@
 <template>
 
-    <v-container>
-        <v-row dense v-for="(param,i) in getObjKeys()" :key="i">
+    <v-container app>
+        <v-row class="px-7" dense v-for="(param,i) in getObjKeys()" :key="i">
             <RenderProportion :item="{param,item}"/>
         </v-row>
     </v-container>
@@ -40,5 +40,8 @@
 
 <style scoped>
 
+    .wrap{
+        margin: 50px 0px !important;
+    }
 
 </style>
